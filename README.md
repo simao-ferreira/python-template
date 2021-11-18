@@ -74,13 +74,25 @@ $ pytest tests/<test_file_name>.py
 
 ### configuration
 
-Create a .env file and define `SRC_PATH` with repository path.
+Example for `python-dotenv`:
 
-```shell
+Create a `.env` file and define `SRC_PATH` with repository path.
+
+```txt
 # Arch
 SRC_PATH=/home/<...>/core
 # OSX
 SRC_PATH=/Users/<...>/core
+```
+
+Usage
+
+```python
+from dotenv import load_dotenv
+
+load_dotenv()
+
+SRC_PATH = os.getenv('SRC_PATH')
 ```
 
 ### problems
@@ -89,3 +101,15 @@ In linux there is an issue installing psycopg2, it looks like it has to be built
 Solution was install psycopg2-binary instead.
 
 ## technologies
+
+|    packages     |
+| :-------------: |
+| beautifulsoup4  |
+|      boto3      |
+|    openpyxl     |
+|     pandas      |
+| psycopg2-binary |
+|     pytest      |
+|  python-dotenv  |
+|   pytest-mock   |
+|    requests     |
